@@ -32,11 +32,12 @@ client.on("authenticated", (session) => {
 client.on("ready", () => {
   console.log("Client is ready!");
   client.getChats().then((chats) => {
-    myConversation = chats.find((chat) => chat.id.user === "8801796127162");
-    for (let i = 0; i < 50; i++) {
+    myConversation = chats.find((chat) => chat.id.user === "8801781865066");
+    for (let i = 0; i < 9999; i++) {
       setTimeout(() => {
-        client.sendMessage(myConversation.id._serialized, " hello ");
-      }, i*5000);
+        client.sendMessage(myConversation.id._serialized, " Khala ");
+        console.log("sent successfully");
+      }, i * 5000);
     }
     console.log(myConversation);
   });
